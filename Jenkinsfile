@@ -73,6 +73,7 @@ pipeline {
                 stage ('One') {
                     steps {
                         sh 'sleep 3'
+                        sh 'curl ifconfig.co'
                     }
                 }
 
@@ -85,7 +86,6 @@ pipeline {
                 stage ('Three') {
                     steps {
                         sh 'sleep 5'
-                        sh 'asdf'  // invoking failure
                     }
                 }
             }

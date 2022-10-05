@@ -98,8 +98,16 @@ pipeline {
     }
 
     post { 
-        always { 
-            sh 'echo Clearing WorkSpace'
+        aborted { 
+            sh 'echo Job was aborted'
+        }
+
+        success { 
+            sh 'echo Job completed successfully'
+        }
+
+        failure { 
+            sh 'echo Job is a failure, please check xyz'
         }
     }
 }

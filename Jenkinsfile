@@ -38,7 +38,7 @@ pipeline {
         stage('Stage Two') {
             input {
                 message "Are you sure you would like to continue? If yes, did you check with your DevOps Lead?"
-                ok "Yes, we should."
+                ok "Yes, I would like to continue"
                 submitter "alice,bob"
                 parameters {
                     string(name: 'PERSON', defaultValue: 'DevOps Lead', description: 'Ensure you check with DevOps Lead')

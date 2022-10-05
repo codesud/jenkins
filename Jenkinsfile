@@ -37,11 +37,11 @@ pipeline {
         }
         stage('Stage Two') {
             input {
-                message "Should we continue?"
+                message "Are you sure you would like to continue? If yes, did you check with your DevOps Lead?"
                 ok "Yes, we should."
                 submitter "alice,bob"
                 parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    string(name: 'PERSON', defaultValue: 'Mr Shelby', description: 'Who should I say hello to?')
                 }
             }
             steps {

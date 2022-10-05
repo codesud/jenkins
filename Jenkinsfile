@@ -6,19 +6,20 @@ pipeline {
     stages {
         stage('Example Username/Password') {
             environment {
-                SERVICE_CREDS = credentials('SSH-Centos7')
+                SSH_CREDS = credentials('SSH-Centos7')
             }
             steps {
-                sh 'echo "Service user is $SERVICE_CREDS_USR"'
+                sh 'echo "SSH private key is located at $SSH_CREDS"'
+                sh 'echo "SSH user is $SSH_CREDS_USR"'
                 sh 'echo "Service password is $SERVICE_CREDS_PSW"'
             }
         }
-       stage('Stage One') {
+        stage('Stage One') {
             steps {
                 sh "echo 'Hello World'"
             }
         }
-       stage('Stage Two') {
+        stage('Stage Two') {
             steps {
                 sh "echo 'Hello DevOps'"
             }

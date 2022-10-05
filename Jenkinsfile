@@ -20,6 +20,10 @@ pipeline {
         cron('H 11 * * *') 
     }
 
+    triggers { 
+        pollSCM('H */4 * * 1-5') 
+    }
+
     stages {
         stage('Example Username/Password') {
             environment {

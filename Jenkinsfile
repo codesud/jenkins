@@ -88,12 +88,12 @@ pipeline {
                     }
                 }
             }
-        stage('Non-Parallel Stage') {
-            stage ('Four') {
-                steps {
-                    sh 'sleep 30'
+        }
+         
+        stage ('Four') {
+            steps {
+                sh 'sleep 30'
                 }
             }
-        }
     }
 }

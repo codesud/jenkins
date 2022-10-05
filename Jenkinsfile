@@ -88,6 +88,12 @@ pipeline {
                     }
                 }
             }
+
+        stage ('Four') {
+                steps {
+                    sh 'sleep 30'
+                }
+            }
         }
     }
 }

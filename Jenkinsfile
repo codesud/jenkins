@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'echo "SSH private key is located at $SSH_CREDS"'
                 sh 'echo "SSH user is $SSH_CREDS_USR"'
-                sh 'echo "Service password is $SERVICE_CREDS_PSW"'
+                sh 'echo "SSH password is $SERVICE_CREDS_PSW"'
             }
         }
         stage('Stage One') {

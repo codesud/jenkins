@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment { 
+        ENV_URL = 'env.pipeline.com'
+    }
     stages {
         stage('Stage One') {
             steps {
@@ -8,18 +11,11 @@ pipeline {
         }
         stage('Stage Two') {
             steps {
-                echo 'Hello Cloud'
+                sh " echo ENV_URL = ${ENV}"
+                
             }
         }
-        stage('Stage Three') {
-            steps {
-                sh '''
-                echo "Hai"
-                echo "Welcome to DevOps"
-                echo " In CICD, Jenkins is top notch"
-                '''                
-            }
-        }
+
     }
 }
 

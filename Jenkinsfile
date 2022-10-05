@@ -11,14 +11,15 @@ pipeline {
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+    
     environment { 
         ENV_URL = 'env.pipeline.com'
-   
+    }
+
     triggers { 
         cron('*/2 * * * *') 
     }
 
-    }
     stages {
         stage('Example Username/Password') {
             environment {

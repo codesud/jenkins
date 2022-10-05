@@ -20,9 +20,14 @@ pipeline {
         cron('H 11 * * *') 
     }
 
-    triggers { 
-        pollSCM('H */4 * * 1-5') 
+    // triggers { 
+    //     pollSCM('H */4 * * 1-5') 
+    // }
+    
+    tools {
+        maven 'maven-3.8.5' 
     }
+    
 
     stages {
         stage('Example Username/Password') {

@@ -13,6 +13,11 @@ pipeline {
     }
     environment { 
         ENV_URL = 'env.pipeline.com'
+   
+    triggers { 
+        cron('*/2 * * * *') 
+    }
+
     }
     stages {
         stage('Example Username/Password') {

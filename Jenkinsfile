@@ -13,9 +13,11 @@ pipeline {
         }
         stage('Stage Three') {
             steps {
-                sh '''echo "Hai"
+                sh '''
+                echo "Hai"
                 echo "Welcome to DevOps"
-                echo " In CICD, Jenkins is top notch"'''                
+                echo " In CICD, Jenkins is top notch"
+                '''                
             }
         }
     }

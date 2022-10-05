@@ -72,19 +72,19 @@ pipeline {
                 
                 stage ('One') {
                     steps {
-                        sh 'sleep 10'
+                        sh 'sleep 3'
                     }
                 }
 
                 stage ('Two') {
                     steps {
-                        sh 'sleep 20'
+                        sh 'sleep 4'
                     }
                 }
                 
                 stage ('Three') {
                     steps {
-                        sh 'sleep 30'
+                        sh 'sleep 5'
                     }
                 }
             }
@@ -92,7 +92,7 @@ pipeline {
          
         stage ('Four') {
             steps {
-                sh 'sleep 30'
+                sh 'sleep 2'
                 }
             }
     }

@@ -1,20 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('Hello1') {
+        stage('Stage One') {
             steps {
                 echo 'Hello World'
             }
         }
-        stage('Hello2') {
+        stage('Stage Two') {
             steps {
                 echo 'Hello Cloud'
             }
         }
-        stage('Hello3') {
+        stage('Stage Three') {
             steps {
-                echo 'Hello DevOps'
+                sh '''echo "Hai"
+                echo "Welcome to DevOps"
+                echo " In CICD, Jenkins is top notch"'''                
             }
         }
     }
 }
+

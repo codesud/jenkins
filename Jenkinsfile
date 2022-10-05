@@ -67,29 +67,26 @@
 pipeline {
     agent any
     stages {
-        parallel {
-        stage ('One') {
-            steps {
-                sh 'sleep 10'
-            }
-        }
+        stage('Parallel Stage') {
+            parallel {
+                
+                stage ('One') {
+                    steps {
+                        sh 'sleep 10'
+                    }
+                }
 
-        stage ('Two') {
-            steps {
-                sh 'sleep 20'
-            }
-        }
-    
-        stage ('Three') {
-            steps {
-                sh 'sleep 30'
-            }
-        }
-    }
-
-        stage ('Four') {
-            steps {
-                sh 'sleep 40'
+                stage ('Two') {
+                    steps {
+                        sh 'sleep 20'
+                    }
+                }
+                
+                stage ('Three') {
+                    steps {
+                        sh 'sleep 30'
+                    }
+                }
             }
         }
     }

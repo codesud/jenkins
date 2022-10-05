@@ -96,4 +96,10 @@ pipeline {
                 }
             }
     }
+
+    post { 
+        always { 
+            sh 'echo Clearing WorkSpace'
+        }
+    }
 }

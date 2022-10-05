@@ -35,19 +35,26 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-        stage('Stage Two') {
-            input {
-                message "Are you sure you would like to continue? If yes, did you check with your DevOps Lead?"
-                ok "Yes, I would like to continue"
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'DevOps Lead', description: 'Ensure you check with DevOps Lead')
-                }
-            }
+
+        stage('Stage Three') {
+            when { environment name: 'CHOICE', value: 'One' }
             steps {
-                echo 'Running the stage'
+                sh 'echo This stage is executed as this Choice is One'
             }
         }
+        // stage('Stage Two') {
+        //     input {
+        //         message "Are you sure you would like to continue? If yes, did you check with your DevOps Lead?"
+        //         ok "Yes, I would like to continue"
+        //         submitter "alice,bob"
+        //         parameters {
+        //             string(name: 'PERSON', defaultValue: 'DevOps Lead', description: 'Ensure you check with DevOps Lead')
+        //         }
+        //     }
+        //     steps {
+        //         echo 'Running the stage'
+        //     }
+        // }
 
     }
 }

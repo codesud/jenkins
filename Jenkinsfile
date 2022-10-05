@@ -85,6 +85,7 @@ pipeline {
                 stage ('Three') {
                     steps {
                         sh 'sleep 5'
+                        sh 'asdf'  // invoking failure
                     }
                 }
             }
@@ -107,7 +108,7 @@ pipeline {
         }
 
         failure { 
-            sh 'echo Job is a failure, please check xyz'
+            cleanWs()  // Clean Workstation
         }
     }
 }

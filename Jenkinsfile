@@ -13,7 +13,7 @@ pipeline {
                 sh 'echo "Service password is $SERVICE_CREDS_PSW"'
                 sh 'curl -u $SERVICE_CREDS https://myservice.example.com'
             }
-            
+
        stage('Stage One') {
             steps {
                 sh "echo 'Hello World'"
@@ -35,4 +35,3 @@ pipeline {
 
     }
 }
-

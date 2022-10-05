@@ -41,11 +41,11 @@ pipeline {
                 ok "Yes, we should."
                 submitter "alice,bob"
                 parameters {
-                    string(name: 'PERSON', defaultValue: 'DevOps Lead', description: 'Who should I say hello to?')
+                    string(name: 'PERSON', defaultValue: 'DevOps Lead', description: 'Ensure you check with DevOps Lead')
                 }
             }
             steps {
-                echo "Hello, ${PERSON}, nice to meet you."
+                echo 'Running the stage'
             }
         }
 

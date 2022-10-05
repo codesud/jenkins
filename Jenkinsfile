@@ -37,9 +37,14 @@ pipeline {
         }
 
         stage('Stage Three') {
-            when { environment name: 'CHOICE', value: 'One' }
+            when {
+                branch 'main'
+                }
+            // when { 
+            //     environment name: 'CHOICE', value: 'One' 
+            //     }
             steps {
-                sh 'echo This stage is executed as this Choice is One'
+                sh 'echo This stage is executed as this is the main branch'
             }
         }
         // stage('Stage Two') {

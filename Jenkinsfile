@@ -86,11 +86,6 @@ pipeline {
                 sh "sleep 1"
             }
         }
-        stage('Sowmya') {
-            steps {
-                sh "sleep 1"
-            }
-        }
     }
 post {
     aborted {
